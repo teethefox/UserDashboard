@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+            <h3>Name: <%= foxes[0].name %></h3>
+            <p>Age: <%= foxes[0].age %></p>
+            <p>Fun Fact: <%= foxes[0].funfact %></p>
+            <p>Id: <%= foxes[0].id %></p>
+            <form action="/foxes/destroy/<%=foxes[0].id%>" method="post">
+                <input type="submit" value="Destroy">
+            </form>
+            <hr>
+            <a href="/">Go Back</a>
+            <a href="/foxes/edit/<%=foxes[0].id%>">Edit</a>
+</body>
+</html>

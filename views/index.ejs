@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    This is all of 'em // <a href="/new">Create New</a>
+    <% for (var i in foxes) { %>
+        <h3>Name: <%= foxes[i].name %></h3>
+        <p>Age: <%= foxes[i].age %></p>
+        <p>Fun Fact: <%= foxes[i].funfact %></p>
+        <p>Id: <a href="/foxes/<%=foxes[0].id%>"><%=foxes[0].id%></a></p>
+        <form action="/foxes/destroy/<%=foxes[i].id%>" method="post">
+            <input type="submit" value="Destroy">
+        </form>
+        <hr>
+      <% } %>
+</body>
+</html>
